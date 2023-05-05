@@ -20,14 +20,19 @@
   
    <h1> Search </h1> 
    <hr>
-   <div>
-       <p id="U District"> U District, Arboretum, Marymoor Park </p>
-       <button class="searchButton"><button onclick = "showSocial()">Social</button>
-   </div>
+    <div id = "social"> 
+        U District, Arboretum, Marymoor Park
+    </div>
+    <button class="searchButton"><button onclick = "showSocial()">Social</button>
 </body>
 <script>
     function showSocial() { 
-        document.getElementById("U District").style.visibility = "hidden    ";
+        var x = document.getElementById("social");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
     }
 </script>
 </html>

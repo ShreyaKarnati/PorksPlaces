@@ -14,7 +14,7 @@ async function initMap() {
     map = new Map(document.getElementById("map"), 
     {
         center: { lat: 47.6628, lng: -122.3139 },
-        zoom: 8
+        zoom: 10
     });
 
     //Create Markers.
