@@ -77,16 +77,6 @@ button:hover {
     border: 30px #1E1E54;
 }
 
-html, body {
-    height: 400px;
-    width: 800px;
-    margin: 0;
-    padding: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .imgBorder {
     border: 1px solid #ddd;
     border-radius: 4px;
