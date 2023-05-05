@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(background.png);
+    background-image: url(Background.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -19,11 +19,20 @@ a {
 button:hover {
     cursor: pointer;
 }
+
+.placeOfDay {
+    background-color: #D0DBD9;
+    width: 800px;
+    border: 15px solid #1E1E54;
+    padding: 50px;
+    margin: 20px;
+}
   
 .nav {
     display: flex;
     justify-content: flex-end;
     background-color: #1E1E54;
+    padding-right: 8px;
 }
   
 .navButton {
@@ -45,6 +54,6 @@ button:hover {
 .logo {
     height: 100px;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 8px;
+    left: 8px;
 }
