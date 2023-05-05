@@ -2,16 +2,42 @@
 <html>
 <head>
 <style>
+.center {
+text-align: center;
+padding: 50px 0;
+}
+
 body {
-  background-image: url('JohnPorkerSnes.png');
+  background-image: url('images/JohnPorkerSnes.png');
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: White;
+  font-size: 160px;
+  font-family: 'Times New Roman', serif;
+  -webkit-text-stroke: 2px black;
+}
+
+@keyframes color-change {
+  0% { color: red; }
+  25% { color: yellow; }
+  50% { color: blue; }
+  75% { color: purple; }
+  100% { color: red; }
 }
 </style>
-</head>
 <body>
 
-<h2>Background Repeat</h2>
 
-<p>By default, the background image will repeat itself if it is smaller than the element where it is specified, in this case the body element.</p>
+
+<h1 style="font-size: 60px"class="center">John Porker invites you to</h1>
+
+<h1 style="animation: color-change 0.5s infinite"class="center"><em>INFINITE FUN</em></h1>
+
 
 </body>
 </html>
