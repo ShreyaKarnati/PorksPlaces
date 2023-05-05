@@ -91,10 +91,24 @@ button:hover {
 
 .column {
     flex: 50.33%;
-    padding: 5px;
+    padding: 15px;
     text-align: center;
-}
+}x
 
 .para {
-    padding: 5px;
+    padding: 15px;
+}
+
+.mapLinks {
+    text-decoration: underline;
+}
+
+.mapPage {
+    height: 400px;
+    width: 800px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
