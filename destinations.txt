@@ -1,0 +1,34 @@
+U District
+Social-Gatherings,Walking,Shopping
+Arboretum
+Social-Gatherings,Walking,Nature
+Marymoor Park
+Social-Gatherings,Walking,Nature,Biking,Dog-Friendly,Entertainment
+Bridle Trails State Park
+Social-Gatherings,Walking,Nature 
+Golden Gardens Park
+Social-Gatherings,Walking,Nature,Dog-Walking
+St. Vincent de Paul’s
+Sustainability,Shopping
+Saint Edward State Park
+Social-Gatherings,Walking,Nature,Dog-Walking,Boating
+The Quad
+Social-Gatherings,Walking,Nature
+Seattle Waterfront
+Social-Gatherings,Walking,Nature
+Green Lake Park
+Social-Gatherings,Walking,Nature
+Snoqualmie-Summit
+Walking,Snow
+Hope Island State Park
+Camping,Boating,Beach
+Deception Pass
+Walking,Camping
+Jackson Park
+Recreation,Walking
+Mount Rainier
+Camping,Hiking
+Bellevue Botanical Garden
+Walking,Social-Gatherings
+Woodland Park Zoo
+Rectreation,Walking,Social-Gatherings
