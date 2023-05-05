@@ -57,3 +57,23 @@ button:hover {
     top: 8px;
     left: 8px;
 }
+
+.mapheader {
+    text-align: center;
+    margin: 10px;
+}
+
+#map {
+    height: 100%;
+    border: 30px #1E1E54;
+}
+
+html, body {
+    height: 400px;
+    width: 800px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
