@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(Background.png);
+    background-image: url("images/Background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -21,11 +21,20 @@ button:hover {
 }
 
 .placeOfDay {
+    margin: auto;
     background-color: #D0DBD9;
-    width: 800px;
+    width: 60%;
     border: 15px solid #1E1E54;
     padding: 50px;
     margin: 20px;
+}
+
+.placeOfDayImage {
+    
+}
+
+.placeMessageContainer {
+    
 }
   
 .nav {
@@ -56,4 +65,26 @@ button:hover {
     position: absolute;
     top: 8px;
     left: 8px;
+}
+
+.imgBorder {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50.33%;
+    padding: 5px;
+    text-align: center;
+}
+
+.para {
+    padding: 5px;
 }
