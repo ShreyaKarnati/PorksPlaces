@@ -131,3 +131,46 @@ button:hover {
     width: 300px;
     padding-top: 4.5%;
 }
+
+.container {
+    overflow: hidden;
+  }
+  
+.filterDiv {
+    float: left;
+    color: #000000;
+    text-align: left;
+    margin: 2px;
+    line-break: after;
+    display: none; /* Hidden by default */
+}
+  
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+  }
+  
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 20px 20px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+/* Add a light grey background on mouse-over */
+.btn:hover {
+    background-color: #ddd;
+  }
+  
+/* Add a dark background to the active button */
+.btn.active {
+    background-color: #666;
+    color: white;
+  }
+
+.p::after {
+    display: block;
+    white-space: pre;
+}
