@@ -109,12 +109,20 @@ button:hover {
     padding: 15px;
 }
 
+.mapLocations {
+    font-size: 20px;
+}
+
+.mapTexts {
+    font-size: 12px;
+}
+
 .mapLinks {
     text-decoration: underline;
 }
 
 .mapPage {
-    height: 400px;
+    height: 500px;
     width: 800px;
     margin: 0;
     padding: 0;

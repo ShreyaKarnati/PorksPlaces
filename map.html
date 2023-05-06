@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pork's Places</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script src="map.js"></script>
+    <script async defer src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDGiu4VkHHNl8bmbG0-kuuFP2-t4aRibpY&callback=initMap"></script>
 </head>
 
 <body>
@@ -19,12 +21,8 @@
       </nav><br> 
 
     <div class="mapPage">
-    <h3 class="mapheader">Pork's Places On A Map</h3>
-    <div id="map"></div>
+        <h3 class="mapheader">Pork's Places On A Map</h3>
+        <div id="map"></div>
     </div>
-    <script src="map.js"></script>
-    <script async defer 
-    src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDGiu4VkHHNl8bmbG0-kuuFP2-t4aRibpY&callback=initMap">
-    </script>
 </body>
 </html>
