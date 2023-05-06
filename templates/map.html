@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pork's Places</title>
+    <link href="{{ url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css"/>    <script src="map.js"></script>
+    <script type="text/javascript" src = " {{url_for('static',filename='script/map.js') }} "></script>
+    <script async defer src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDGiu4VkHHNl8bmbG0-kuuFP2-t4aRibpY&callback=initMap"></script>
+</head>
+
+<body>
+    <nav class="nav">
+        <a href="index.html" class="logoContainer"><img src="{{url_for('static',filename='images/logo.png')}}" class="logo"></a>
+        <button class="navButton"><a href="index.html" class="navLinks">Home</a></button>
+        <button class="navButton"><a href="search.html" class="navLinks">Search</a></button>
+        <button class="navButton"><a href="map.html" class="navLinks">Map</a></button>
+        <button class="navButton"><a href="sustainability.html" class="navLinks">Sustainability</a></button>
+        <button class="navButton"><a href="creators.html" class="navLinks">Creators</a></button>
+      </nav><br> 
+
+    <div class="mapPage">
+        <h3 class="mapheader">Pork's Places On A Map</h3>
+        <div id="map"></div>
+    </div>
+</body>
+</html>
