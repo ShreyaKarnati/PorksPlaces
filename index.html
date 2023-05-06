@@ -23,7 +23,33 @@
   <div class="placeOfDay">
     <h1>Pork's Place of the Day</h1>
     <p>There is going to be a thing here for a randomly selected place</p>
+    <p id="date"></p>
+    <p id="initialSeed"></p>
+    <p id="finalSeed"></p>
   </div>
+
+  <script>
+    var date = new Date();
+    date = date.toDateString();
+    document.getElementById("date").innerHTML = date;
+    var seed = 0;
+    for(let i = 0; i < date.length; i++){
+      var charCode = date.charCodeAt(i);
+      if(charCode > 0 && charCode > 0)
+      {
+      seed = seed + date.charCodeAt(i) * Math.pow(10, i);
+      }
+      else {
+        seed = charCodeAt(0);
+      }
+    }
+    document.getElementById("initialSeed").innerHTML = seed;
+    var modulus = 9471;
+    var multiplier = 507;
+    var increment = 4373;
+    seed = (seed * multiplier + increment) % modulus;
+    document.getElementById("finalSeed").innerHTML = seed;
+  </script>
    
 </body>
 </html>
