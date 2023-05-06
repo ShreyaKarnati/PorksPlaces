@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title >Search Page</title>
-  <link href="style.css" rel="stylesheet" type="text/css"/>
-  <script src="script.js"></script>
+  <link href="{{ url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src = " {{url_for('static',filename='script/search.js') }} "></script>
 </head>
 
 <body>
   <nav class="nav">
-    <a href="index.html" class="logoContainer"><img src="logo.png" class="logo"></a>
+    <a href="index.html" class="logoContainer"><img src="{{url_for('static',filename='images/logo.png')}}" class="logo"></a>
     <button class="navButton"><a href="index.html" class="navLinks">Home</a></button>
     <button class="navButton"><a href="search.html" class="navLinks">Search</a></button>
     <button class="navButton"><a href="map.html" class="navLinks">Map</a></button>
@@ -59,71 +59,5 @@
     </hr>
     -->
 </body>
-<script>
-    filterSelection("all")
-    function filterSelection(c) {
-      var x, i;
-      x = document.getElementsByClassName("filterDiv");
-      if (c == "all") c = "";
-      // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-      for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-      }
-    }
 
-    // Show filtered elements
-    function w3AddClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {
-          element.className += " " + arr2[i];
-        }
-      }
-    }
-
-    // Hide elements that are not selected
-    function w3RemoveClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-          arr1.splice(arr1.indexOf(arr2[i]), 1);
-      } 
-      }
-      element.className = arr1.join(" ");
-    } 
-
-    // Add active class to the current control button (highlight it)
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
-    /*
-    function showSocial() { 
-        var x = document.getElementById("social");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-    }
-    function showNature() { 
-        var x = document.getElementById("nature");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-    }
-    */
-</script>
 </html>
