@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>About Us</title>
+  <link href="{{ url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css"/>
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <a href="index.html" class="logoContainer"><img src="{{url_for('static',filename='images/logo.png')}}" class="logo"></a>
+        <button class="navButton"><a href="index.html" class="navLinks">Home</a></button>
+        <button class="navButton"><a href="search.html" class="navLinks">Search</a></button>
+        <button class="navButton"><a href="map.html" class="navLinks">Map</a></button>
+        <button class="navButton"><a href="sustainability.html" class="navLinks">Sustainability</a></button>
+        <button class="navButton"><a href="creators.html" class="navLinks">Creators</a></button>
+      </nav><br>
+
+      <div>
+        <h1> About Us</h1>
+     </div>
+     <hr>
+     
+    <h2> Our Team </h2>
+     <div class = "row">
+       <div class = "column">
+          <img src="{{url_for('static',filename='images/test.png')}}" alt="Temp" class="person">
+         <p> Name 1</p>
+     </div>
+     <div class = "column">
+       <img src="{{url_for('static',filename='images/test.png')}}" alt="T2" class="person">
+       <p> Malachy</p>
+     </div>
+       <div class = "column">
+         <img src="{{url_for('static',filename='images/test.png')}}" alt="T3" class="person">
+         <p> Name 3</p>
+     </div>
+     </div>
+   
+     <div class = "row"> 
+       <div class = "column">
+         <img src="{{url_for('static',filename='images/test.png')}}" alt="T3" class="person">
+         <p> Name 4</p>
+     </div>
+       <div class = "column">
+         <img src="{{url_for('static',filename='images/test.png')}}" alt="T3" class="person">
+         <p> Name 5</p>
+     </div>
+     </div>
+     
+     <div>
+       <p class = "para">
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+             aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+       </p>
+     </div>
+     
+</body>
+
+</html>
