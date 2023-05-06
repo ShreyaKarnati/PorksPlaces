@@ -26,15 +26,7 @@ button:hover {
     width: 60%;
     border: 15px solid #1E1E54;
     padding: 50px;
-    margin: 20px;
-}
-
-.placeOfDayImage {
-    
-}
-
-.placeMessageContainer {
-    
+    text-align: center;
 }
   
 .nav {
@@ -136,6 +128,6 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1%;
-    width: 90%;
+    width: 300px;
     padding-top: 4.5%;
 }

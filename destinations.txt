@@ -1,4 +1,4 @@
-U District
+University District
 Social-Gatherings,Walking,Shopping
 Arboretum
 Social-Gatherings,Walking,Nature
