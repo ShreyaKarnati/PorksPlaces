@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width">
   <title >Pork's Places</title>
   <link href="{{ url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css"/>
-  <script src="script.js"></script>
+  <script type="text/javascript" src = " {{url_for('static',filename='script/script.js') }} "></script>
   <link rel="shortcut icon"  type="image/x-icon" href="images/logo.png"/>
 </head>
 
@@ -20,51 +20,50 @@
   </nav><br>
 
   <!-- <img src="images/john.png" alt="messenger"> -->
-  
+  <div>
+    <img src="{{url_for('static',filename='images/PorkerFullBody.png')}}" alt="John Porker" class="porker">
+  </div>
   <div class="placeOfDay">
+
     <h1>Pork's Place of the Day</h1>
-    <h2 Id="LocationName">There is going to be a thing here for a randomly selected place</h2>
-    <p Id="Description">There Will be a description of the randomly selected place</p>
-
-
+    <h2 id="LocationName">There is going to be a thing here for a randomly selected place</h2>
+    <p id="Description">There Will be a description of the randomly selected place</p>
+    <p id="finalSeed"> </p>
+    <script>
+      window.onload = function(){
+        document.getElementById("LocationName").innerHTML = date;
+        var date = new Date();
+        date = date.toDateString();
+        document.getElementById("date").innerHTML = date;
+        var seed = 0;
+        for(let i = 0; i < date.length; i++){
+          var charCode = date.charCodeAt(i);
+          if(charCode > 0 && charCode > 0)
+          {
+          seed = seed + date.charCodeAt(i) * Math.pow(10, i);
+          }
+          else {
+            seed = charCodeAt(0);
+          }
+        }
+        document.getElementById("initialSeed").innerHTML = seed;
+        var modulus = 1000;
+        var multiplier = 507;
+        var increment = 4373;
+        seed = (seed * multiplier + increment) % modulus;
+        document.getElementById("finalSeed").innerHTML = seed;
+    
+        var randomNumber = Math.floor(seed/10000*18);
+        var content = writeData(1);
+        document.getElementById("LocationName").textContent = "Something";
+        document.getElementById("Description").innerHTML = content[1];
+    }
+    </script>
     
   </div>
 
-  <a href="pork.html" class="navLinks"><button class="navButton">Click Me!</button></a>
-
-  <script>
-    var date = new Date();
-    date = date.toDateString();
-    document.getElementById("date").innerHTML = date;
-    var seed = 0;
-    for(let i = 0; i < date.length; i++){
-      var charCode = date.charCodeAt(i);
-      if(charCode > 0 && charCode > 0)
-      {
-      seed = seed + date.charCodeAt(i) * Math.pow(10, i);
-      }
-      else {
-        seed = charCodeAt(0);
-      }
-    }
-    document.getElementById("initialSeed").innerHTML = seed;
-    var modulus = 1000;
-    var multiplier = 507;
-    var increment = 4373;
-    seed = (seed * multiplier + increment) % modulus;
-    document.getElementById("finalSeed").innerHTML = seed;
-
-    var randomNumber = Math.floor(seed/10000*18);
-    var content = writeData(randomNumber);
-    document.getElementById("LocationName").innerHTML = content[0];
-    document.getElementById("Description").innerHTML = content[1];
-
-    
-
-    
-  </script>
-
-  
-   
+  <div>
+  <a href="pork.html" class="navLinks"><button class="navButtonPork">Click Me!</button></a>
+  </div>
 </body>
 </html>
