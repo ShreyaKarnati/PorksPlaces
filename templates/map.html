@@ -13,13 +13,13 @@
 <body>
     <nav class="nav">
         <a href="index.html" class="logoContainer"><img src="{{url_for('static',filename='images/logo.png')}}" class="logo"></a>
-        <button class="navButton"><a href="index.html" class="navLinks">Home</a></button>
-        <button class="navButton"><a href="search.html" class="navLinks">Search</a></button>
-        <button class="navButton"><a href="map.html" class="navLinks">Map</a></button>
-        <button class="navButton"><a href="sustainability.html" class="navLinks">Sustainability</a></button>
-        <button class="navButton"><a href="creators.html" class="navLinks">Creators</a></button>
-      </nav><br> 
-
+        <a href="index.html" class="navLinks"><button class="navButton">Home</button></a>
+        <a href="search.html" class="navLinks"><button class="navButton">Search</button></a>
+        <a href="map.html" class="navLinks"><button class="navButton">Map</button></a>
+        <a href="sustainability.html" class="navLinks"><button class="navButton">Sustainability</button></a>
+        <a href="creators.html" class="navLinks"><button class="navButton">Creators</button></a>
+    </nav><br>
+    
     <div class="mapPage">
         <h3 class="mapheader">Pork's Places On A Map</h3>
         <div id="map"></div>

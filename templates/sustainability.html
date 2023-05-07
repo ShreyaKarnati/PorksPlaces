@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title >Pork's Places</title>
+  <title>Pork's Places</title>
   <link href="{{ url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css"/>
   <script src="script.js"></script>
 </head>
@@ -11,13 +11,41 @@
 <body>
   <nav class="nav">
     <a href="index.html" class="logoContainer"><img src="{{url_for('static',filename='images/logo.png')}}" class="logo"></a>
-    <button class="navButton"><a href="/" class="navLinks">Home</a></button>
-    <button class="navButton"><a href="search.html" class="navLinks">Search</a></button>
-    <button class="navButton"><a href="map.html" class="navLinks">Map</a></button>
-    <button class="navButton"><a href="sustainability.html" class="navLinks">Sustainability</a></button>
-    <button class="navButton"><a href="creators.html" class="navLinks">Creators</a></button>
+    <a href="index.html" class="navLinks"><button class="navButton">Home</button></a>
+    <a href="search.html" class="navLinks"><button class="navButton">Search</button></a>
+    <a href="map.html" class="navLinks"><button class="navButton">Map</button></a>
+    <a href="sustainability.html" class="navLinks"><button class="navButton">Sustainability</button></a>
+    <a href="creators.html" class="navLinks"><button class="navButton">Creators</button></a>
   </nav><br>
   
+  <h1>Sustainability Statement</h1>
+
+  <p>It’s been a long 3 years since the pandemic went underway, but the WHO has, as of May 5th,
+   declared its end. Whether this is a good decision or not, our lives have changed in many important ways. 
+   Did you know that the Pacific Northwest is a particularly beautiful place? Actually <em>know</em>, not just going off of faded memories. 
+   For many of us, we used to experience that beauty and tranquility firsthand, 
+   but it’s been so long since we have that we don’t even remember what we’ve forgotten. </p>
+
+  <p>This site is for filling in some of those gaps your memories have developed. 
+  The model is simple: we recommend places to go while giving you information about what it is, 
+  how far away is it, and a link to their website if you want more detail. You can view all the locations on a map on our maps page, 
+  or search for a specific <i>Place</i> by name or category on our search page. Then you decide if you want to go to those <i>Places</i>. 
+  Our good friend <mark>John Porker</mark> is there to ensure your decisions are wise. </p>
+
+  <p>Sustainability not only applies to the world around you, but to your life as well. 
+  Taking good care of your brain and body means there’s fewer obstacles to living your life how you want to. 
+  Just as protecting nature means that the world around you can continue to live and grow, 
+  existing in that nature, even for just a bit at a time, grounds you in that world. 
+  It can be scary to feel like you’re cut off from everything, having to face all your challenges alone. 
+  We hope that our site can help break that illusion. Not only by existing in nature, but as a social tool: 
+  as more people use this site, the higher the chances you’ll meet someone else in a <i>Place</i>. </p>
+
+  <p><i>Pork’s Places</i> has just been born, but it will continue to grow. 
+  We plan to add new functionality such as showing bike trails and bus routes 
+  to show how to get to the <i>Places</i> in an environmentally conscious and cheap way. </p>
+
+  <p>We thank you for engaging with <i>Pork's Places</i> and hope we showed you some cool <i>Places</i>!</p>  
    
 </body>
+
 </html>

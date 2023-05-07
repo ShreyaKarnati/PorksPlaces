@@ -6,6 +6,7 @@
   <title >Pork's Places</title>
   <link href="{{ url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css"/>
   <script src="script.js"></script>
+  <link rel="shortcut icon"  type="image/x-icon" href="images/logo.png"/>
 </head>
 
 <body>
@@ -22,32 +23,48 @@
   
   <div class="placeOfDay">
     <h1>Pork's Place of the Day</h1>
-    <p>There is going to be a thing here for a randomly selected place</p>
+    <h2 Id="LocationName">There is going to be a thing here for a randomly selected place</h2>
+    <p Id="Description">There Will be a description of the randomly selected place</p>
+
+
     
   </div>
 
+  <a href="pork.html" class="navLinks"><button class="navButton">Click Me!</button></a>
+
   <script>
-    // var date = new Date();
-    // date = date.toDateString();
-    // document.getElementById("date").innerHTML = date;
-    // var seed = 0;
-    // for(let i = 0; i < date.length; i++){
-    //   var charCode = date.charCodeAt(i);
-    //   if(charCode > 0 && charCode > 0)
-    //   {
-    //   seed = seed + date.charCodeAt(i) * Math.pow(10, i);
-    //   }
-    //   else {
-    //     seed = charCodeAt(0);
-    //   }
-    // }
-    // document.getElementById("initialSeed").innerHTML = seed;
-    // var modulus = 9471;
-    // var multiplier = 507;
-    // var increment = 4373;
-    // seed = (seed * multiplier + increment) % modulus;
-    // document.getElementById("finalSeed").innerHTML = seed;
+    var date = new Date();
+    date = date.toDateString();
+    document.getElementById("date").innerHTML = date;
+    var seed = 0;
+    for(let i = 0; i < date.length; i++){
+      var charCode = date.charCodeAt(i);
+      if(charCode > 0 && charCode > 0)
+      {
+      seed = seed + date.charCodeAt(i) * Math.pow(10, i);
+      }
+      else {
+        seed = charCodeAt(0);
+      }
+    }
+    document.getElementById("initialSeed").innerHTML = seed;
+    var modulus = 1000;
+    var multiplier = 507;
+    var increment = 4373;
+    seed = (seed * multiplier + increment) % modulus;
+    document.getElementById("finalSeed").innerHTML = seed;
+
+    var randomNumber = Math.floor(seed/10000*18);
+    var content = writeData(randomNumber);
+    document.getElementById("LocationName").innerHTML = content[0];
+    document.getElementById("Description").innerHTML = content[1];
+
+    
+
+    
   </script>
+
+  
    
 </body>
 </html>

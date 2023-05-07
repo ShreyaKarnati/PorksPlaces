@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title >Search Page</title>
+  <title>Pork's Places</title>
   <link href="{{ url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css"/>
   <script type="text/javascript" src = " {{url_for('static',filename='script/search.js') }} "></script>
 </head>
@@ -11,41 +11,41 @@
 <body>
   <nav class="nav">
     <a href="index.html" class="logoContainer"><img src="{{url_for('static',filename='images/logo.png')}}" class="logo"></a>
-    <button class="navButton"><a href="index.html" class="navLinks">Home</a></button>
-    <button class="navButton"><a href="search.html" class="navLinks">Search</a></button>
-    <button class="navButton"><a href="map.html" class="navLinks">Map</a></button>
-    <button class="navButton"><a href="sustainability.html" class="navLinks">Sustainability</a></button>
-    <button class="navButton"><a href="creators.html" class="navLinks">Creators</a></button>
+    <a href="index.html" class="navLinks"><button class="navButton">Home</button></a>
+    <a href="search.html" class="navLinks"><button class="navButton">Search</button></a>
+    <a href="map.html" class="navLinks"><button class="navButton">Map</button></a>
+    <a href="sustainability.html" class="navLinks"><button class="navButton">Sustainability</button></a>
+    <a href="creators.html" class="navLinks"><button class="navButton">Creators</button></a>
   </nav><br>
   
    <h1> Search </h1> 
-   <hr>
     <div id="myBtnContainer">
       <button class="btn active" onclick="filterSelection('all')"> Show all</button>
       <button class="btn" onclick="filterSelection('Social')"> Social</button>
       <button class="btn" onclick="filterSelection('Nature')"> Nature</button>
       <button class="btn" onclick="filterSelection('Recreational')"> Recreational</button>
     </div>
+  
     <div class="container">
-      <div class="filterDiv Social Recreational">University District</div>
-    <div class="filterDiv Social Nature Recreational">The Arboretum</div>
-    <div class="filterDiv Social Nature Recreational">Marymoor Park</div>
-    <div class="filterDiv Nature Recreational">Bridle Trails State Park</div>
-    <div class="filterDiv Social Nature Recreational">Golden Gardens Park</div>
-    <div class="filterDiv Social">St. Vincent De Paul's</div>
-    <div class="filterDiv Social Nature Recreational">Saint Edward State Park</div>
-    <div class="filterDiv Social Nature">The Quad</div>
-    <div class="filterDiv Social Recreational">Seattle Waterfront</div>
-    <div class="filterDiv Social Nature Recreational">Green Lake Park</div>
-    <div class="filterDiv Social Nature Recreational">Snoqualmie Summit</div>
-    <div class="filterDiv Nature Recreational">Hope Island State Park</div>
-    <div class="filterDiv Nature Recreational">Deception Pass</div>
-    <div class="filterDiv Social Nature Recreational">Jackson Park</div>
-    <div class="filterDiv Nature Recreational">Mount Rainier</div>
-    <div class="filterDiv Nature">Bellevue Botanical Garden</div>
-    <div class="filterDiv Nature">Woodland Park Zoo</div>
+      <div class="filterDiv Social Recreational"><h1 class = "locations"><a href = https://www.udistrictseattle.com/ target = "blank" class = "mapLinksSearch">University District</a></h1></div>
+      <div class="filterDiv Social Nature Recreational"><h1 class = "locations"><a href= https://botanicgardens.uw.edu/washington-park-arboretum/ target = "blank" class = "mapLinksSearch">The Arboretum</a></h1></div>
+      <div class="filterDiv Social Nature Recreational"><h1 class = "locations"><a href= https://kingcounty.gov/services/parks-recreation/parks/parks-and-natural-lands/popular-parks/marymoor.aspx target = "blank" class = "mapLinksSearch">Marymoor Park</div>
+      <div class="filterDiv Nature Recreational"><h1 class = "locations"><a href= https://www.parks.wa.gov/481/Bridle-Trails target = "blank" class = "mapLinksSearch">Bridle Trails State Park</div>
+      <div class="filterDiv Social Nature Recreational"><h1 class = "locations"><a href= https://www.seattle.gov/parks/allparks/golden-gardens-park target = "blank" class = "mapLinksSearch">Golden Gardens Park</div>
+      <div class="filterDiv Social"><h1 class = "locations"><a href= https://svdpseattle.org/ target = "blank" class = "mapLinksSearch">St. Vincent De Paul's</div>
+      <div class="filterDiv Social Nature Recreational"><h1 class = "locations"><a href= https://www.parks.wa.gov/577/Saint-Edward target = "blank" class = "mapLinksSearch">Saint Edward State Park</div>
+      <div class="filterDiv Social Nature"><h1 class = "locations"><a href= https://www.washington.edu/maps/#!/lndmk-1 target = "blank" class = "mapLinksSearch">The Quad</div>
+      <div class="filterDiv Social Recreational"><h1 class = "locations"><a href= https://waterfrontseattle.org/ target = "blank" class = "mapLinksSearch">Seattle Waterfront</div>
+      <div class="filterDiv Social Nature Recreational"><h1 class = "locations"><a href= https://www.seattle.gov/parks/allparks/green-lake-park target = "blank" class = "mapLinksSearch">Green Lake Park</div>
+      <div class="filterDiv Social Nature Recreational"><h1 class = "locations"><a href= https://summitatsnoqualmie.com/  target = "blank" class = "mapLinksSearch">Snoqualmie Summit</div>
+      <div class="filterDiv Nature Recreational"><h1 class = "locations"><a href= https://www.parks.wa.gov/517/Hope-Island---Mason  target = "blank" class = "mapLinksSearch">Hope Island State Park</div>
+      <div class="filterDiv Nature Recreational"><h1 class = "locations"><a href= https://www.parks.wa.gov/497/Deception-Pass target = "blank" class = "mapLinksSearch">Deception Pass</div>
+      <div class="filterDiv Social Nature Recreational"><h1 class = "locations"><a href= http://premiergc.com/-jackson-park-golf-course target = "blank" class = "mapLinksSearch">Jackson Park</div>
+      <div class="filterDiv Nature Recreational"><h1 class = "locations"><a href= https://www.nps.gov/mora/index.htm target = "blank" class = "mapLinksSearch">Mount Rainier</div>
+      <div class="filterDiv Nature"><h1 class = "locations"><a href= https://bellevuebotanical.org/admission-hours-directions-parking/ target = "blank" class = "mapLinksSearch">Bellevue Botanical Garden</div>
+      <div class="filterDiv Nature"><h1 class = "locations"><a href= https://www.seattle.gov/parks/allparks/woodland-park target = "blank" class = "mapLinksSearch">Woodland Park Zoo</div>
+    </div>
 
-  </div>
    <!--
     <div id = "social"> 
         U District, Arboretum, Marymoor Park
