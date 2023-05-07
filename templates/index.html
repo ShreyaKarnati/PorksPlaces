@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width">
   <title >Pork's Places</title>
   <link href="{{ url_for('static',filename='css/style.css')}}" rel="stylesheet" type="text/css"/> 
-   
-  <!-- <script src = "{{url_for('static',filename='script/script.js') }}"></script> -->
-  <!-- <script type="module" src="./../static/script/script.js"></script> -->
-  <!-- <script src="script.js"></script> -->
   <link rel="shortcut icon"  type="image/x-icon" href="images/logo.png"/>
 </head>
 
@@ -22,7 +18,7 @@
     <a href="creators.html" class="navLinks"><button class="navButton">Creators</button></a>
   </nav><br>
 
-  <!-- <img src="images/john.png" alt="messenger"> -->
+
   <div>
     <img src="{{url_for('static',filename='images/PorkerFullBody.png')}}" alt="John Porker" class="porker">
   </div>
@@ -31,30 +27,7 @@
     <h1>Pork's Place of the Day</h1>
     <h2 id="LocationName">There is going to be a thing here for a randomly selected place</h2>
     <p id="Description">There Will be a description of the randomly selected place</p>
-    <!-- <p id="finalSeed"> </p> -->
   </div>
-
-  <script>
-    // import {writeData} from "./../static/script/script.js";
-    // var date = new Date();
-    // date = date.toDateString();
-    // var seed = 0;
-    // for(let i = 0; i < date.length; i++){
-    //   var charCode = date.charCodeAt(i);
-    //   if(charCode > 0 && charCode > 0)
-    //   {
-    //   seed = seed + date.charCodeAt(i) * Math.pow(10, i);
-    //   }
-    //   else {
-    //     seed = charCodeAt(0);
-    //   }
-    // }
-    // var modulus = 9471;
-    // var multiplier = 727;
-    // var increment = 4373;
-    // seed = (seed * multiplier + increment) % modulus;
-  //   writeData(1);
-   </script>
    <script type="text/javascript" src = " {{url_for('static',filename='script/script.js') }} "></script>
 </body>
 </html>
