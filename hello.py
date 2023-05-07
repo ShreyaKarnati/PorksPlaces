@@ -1,53 +1,34 @@
-### HTML W/ Flask
-### HTTP Verb GET and POST
-
 from flask import Flask,redirect,url_for,render_template,request
 from markupsafe import escape
-from datetime import date
-from array import *
-
 ### WSGI Applicaiton 
 app = Flask(__name__)
 
-### Forwards
-@app.route('/')
+@app.route('/example')
 def index():
-    return render_template('index.html')
-@app.route('/index.html')
-def secondIndex():
-    return render_template('index.html')
+    return 'Index Page Test'
 
-@app.route('/search.html')
-def search():
-    return render_template('search.html')
+@app.route('/hello')
+def hello():
+    return 'Hello, World'
+### Variable Rules
+@app.route('/success/<int:score>') 
+def success(score): 
+    return "The Person has passed " + str(score)
+@app.route('/fail/<int:score>') 
+def fail(score): 
+    return "The Person has failed " + str(score)
 
-@app.route('/map.html')
-def map():
-    return render_template('map.html')
-
-@app.route('/sustainability.html')
-def sustainability():
-    return render_template('sustainability.html')
-
-@app.route('/creators.html')
-def creators():
-    return render_template('creators.html')
-@app.route('/pork.html')
-def porkkkkkk():
-    return render_template('pork.html')
-@app.route('/test')
-def test(): 
-    thisdict = {
-    1: render_template('creators.html', 1),
-    2: render_template(),
-    "model": "Mustang",
-    "year": 1964
-    }
-    return thisdict[1]
-
-@app.route('/locationData')
-def locationData(int):
-    Locations = [
+@app.route('/result/<int:marks>')
+def result(marks):
+    res = ""
+    if marks < 50:
+        res = 'fail'
+    else:
+        res = 'success'
+    return redirect(url_for(res,score=marks))
+@app.route('/') ### Definitions
+def example():
+    data = [
         [47.6628, -122.3139, "<h1 class = \"mapLocations\"><a href = https://www.udistrictseattle.com/ target = \"blank\" class = \"mapLinks\">University District</a></h1> <p class = \"mapTexts\">A social hub for all UW Students. There are beautiful trails such as the Burke Gillman Trail. Eateries such as Mod Pizza, Cedars, and Aladdin.</p>"],
         [47.6364, -122.2958, "<h1 class = \"mapLocations\"><a href= https://botanicgardens.uw.edu/washington-park-arboretum/ target = \"blank\" class = \"mapLinks\">The Arboretum</a></h1> <p class = \"mapTexts\">A welcome oasis on the shores of Lake Washington. Take a walk through the Arboretum and discover this beautiful living collection. The Graham Visitors Center contains an information desk, and a gift shop managed by the Arboretum Foundation. The Japanese Garden, located at the south end of the Arboretum has an entrance fee and is managed by the City of Seattle.</p>"],
         [47.6626, -122.1061, "<h1 class = \"mapLocations\"><a href = https://kingcounty.gov/services/parks-recreation/parks/parks-and-natural-lands/popular-parks/marymoor.aspx target = \"blank\" class = \"mapLinks\">Marymoor Park</a></h1> <p class = \"mapTexts\">Marymoor Park has plenty of incredible events such as Concerts, Movies, Off Leash Dog Walking, Day Circuses, Activities Rentals, and the Velodrome!</p>"],
@@ -66,11 +47,10 @@ def locationData(int):
         [47.6092, -122.1788, "<h1 class = \"mapLocations\"><a href = https://bellevuebotanical.org/admission-hours-directions-parking/ target = \"blank\" class = \"mapLinks\">Bellevue Botanical Garden</a></h1> <p class = \"mapTexts\">Since the land was donated in 1981 to the City of Bellevue, Bellevue Arboretum has been a public park with free admission to trails and gardens. There are also facilities which can be reserved for weddings and parties.</p>"],
         [47.6684, -122.3509, "<h1 class = \"mapLocations\"><a href = https://www.seattle.gov/parks/allparks/woodland-park target = \"blank\" class = \"mapLinks\">Woodland Park Zoo</a></h1> <p class = \"mapTexts\">Woodland Park is an exciting, multipurpose park and recreation space just southwest of Green Lake and north of the Fremont district. There are Trails, gardens, sports fields, and even a zoo.</p>"]
     ]
-    return render_template("destinations.html", Locations = Locations[int])
-
-### Variable Rules
-### Result Checker
-
+    return render_template('changeData.html', data = data) 
+    ### Render template sends information to the page. 
+    ### Specifically it goes to an html file called changeData 
+    ### Now go to the html file
 
 if __name__ == '__main__':
     app.run(debug=True)
