@@ -1,3 +1,6 @@
+console.log("script.js loaded");
+let script;
+
 const contents = [
     ["University District", "A social hub for all UW Students. There are beautiful trails such as the Burke Gillman Trail. Eateries such as Mod Pizza, Cedars, and Aladdin."],
     ["The Arboretum", "A welcome oasis on the shores of Lake Washington. Take a walk through the Arboretum and discover this beautiful living collection. The Graham Visitors Center contains an information desk, and a gift shop managed by the Arboretum Foundation. The Japanese Garden, located at the south end of the Arboretum has an entrance fee and is managed by the City of Seattle."],
@@ -18,6 +21,29 @@ const contents = [
     ["Woodland Park Zoo", "Woodland Park is an exciting, multipurpose park and recreation space just southwest of Green Lake and north of the Fremont district. There are Trails, gardens, sports fields, and even a zoo."]
 ];
 
-function writeData(num) {
-    return contents[num];
+function writeData() {
+    var date = new Date();
+    date = date.toDateString();
+    var seed = 0;
+    for(let i = 0; i < date.length; i++){
+      var charCode = date.charCodeAt(i);
+      if(charCode > 0 && charCode > 0)
+      {
+      seed = seed + date.charCodeAt(i) * Math.pow(10, i);
+      }
+      else {
+        seed = charCodeAt(0);
+      }
+    }
+    var modulus = 10000;
+    var multiplier = 727;
+    var increment = 4373;
+    seed = (seed * multiplier + increment) % modulus;
+    var num = Math.floor(seed / 10000*18);
+    document.getElementById("LocationName").innerHTML = contents[num][0];
+    document.getElementById("Description").innerHTML = contents[num][1];
 }
+
+writeData();
+
+// export default writeData;
