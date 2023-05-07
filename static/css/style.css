@@ -4,6 +4,11 @@
     
 }
 
+p {
+    text-align: center;
+    padding: 30px;
+}
+
 body {
     background-image: url("/static/images/Background.png");
     background-repeat: no-repeat;
@@ -11,7 +16,7 @@ body {
     background-attachment: fixed;
 }
 
-a {
+.navLinks {
     text-decoration: none;
     color: black;
 }
@@ -20,7 +25,34 @@ button:hover {
     cursor: pointer;
 }
 
+.porker {
+    max-width: 20%;
+    max-height: auto;
+    float: left; 
+    vertical-align: text-top;
+}
+.porkButton { 
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    background-color: inherit;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.porkDiv { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px; 
+}
 .placeOfDay {
+    align-items: center;
+    justify-content: center;
     margin: auto;
     background-color: #D0DBD9;
     width: 60%;
@@ -47,6 +79,19 @@ button:hover {
     margin-bottom: 25px;
     padding: 10px;
 }
+.navButtonPork {
+    font-size: 20px;
+    color: #D0DBDD;
+    background-color: #d0dbd9;
+    margin-left: 8px;
+    margin-right: 8px;
+    border: 3px solid #d0dbd9;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
 .searchButton { 
     font-size: 20px; 
     background-color: aliceblue;
@@ -65,8 +110,8 @@ button:hover {
 .logo {
     height: 100px;
     position: absolute;
-    top: 8px;
-    left: 8px;
+    top: 0px;
+    left: 0px;
 }
 
 .mapheader {
@@ -114,8 +159,8 @@ button:hover {
 }
 
 .mapPage {
-    height: 500px;
-    width: 800px;
+    height: 800px;
+    width: 1400px;
     margin: 0;
     padding: 0;
     display: block;
@@ -134,15 +179,23 @@ button:hover {
 
 .container {
     overflow: hidden;
-  }
+}
   
 .filterDiv {
     float: left;
-    color: #000000;
     text-align: left;
     margin: 2px;
     line-break: after;
     display: none; /* Hidden by default */
+    font-size: 20px;
+    background-color: #1E1E54;
+    margin-left: 8px;
+    margin-right: 8px;
+    border: 3px solid #1E1E54;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px;
 }
   
 /* The "show" class is added to the filtered elements */
@@ -173,4 +226,14 @@ button:hover {
 .p::after {
     display: block;
     white-space: pre;
+}
+
+.locations {
+    font-size: 15px;
+    color: white;
+}
+
+.mapLinksSearch {
+    text-decoration: none;
+    color: white;
 }
