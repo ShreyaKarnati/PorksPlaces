@@ -151,11 +151,12 @@ button:hover {
 }
 
 .mapTexts {
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .mapLinks {
-    text-decoration: underline;
+    color:#1E1E54;
+    text-decoration: none;
 }
 
 .mapPage {
@@ -177,10 +178,22 @@ button:hover {
     padding-top: 4.5%;
 }
 
-.container {
-    overflow: hidden;
+.contextBoxSize {
+    float: left;
+    text-align: left;
+    margin: 2px;
+    line-break: after;
+    display: none; /* Hidden by default */
+    font-size: 20px;
+    background-color: #1E1E54;
+    margin-left: 8px;
+    margin-right: 8px;
+    border: 3px solid #1E1E54;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px;
 }
-  
 .filterDiv {
     float: left;
     text-align: left;
@@ -210,6 +223,7 @@ button:hover {
     padding: 20px 20px;
     background-color: #f1f1f1;
     cursor: pointer;
+    margin: 5px;
   }
   
 /* Add a light grey background on mouse-over */
@@ -236,4 +250,13 @@ button:hover {
 .mapLinksSearch {
     text-decoration: none;
     color: white;
+}
+
+.container {
+    overflow: hidden;
+}
+.myBtnContainer { 
+    display: flex;
+    justify-content: center;
+    
 }
